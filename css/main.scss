@@ -1,11 +1,10 @@
 @import 'base';
 //header部分开始
 .header{
-	//overflow-x: hidden;
 	@include zuoyou;
 	width: 100%;
 	height: 44px;
-	background: rgba(0,0,0,0.8);
+	background: #333333;
 	z-index: 777777;
 	.header-inner{
 		max-width: 1024px;
@@ -151,9 +150,10 @@
 }
 .searchbox{
 	@include zuoyou;
-	height:100%;
+	height:0;
 	top:0;
-	width: 668px;
+	width: 0;
+	overflow: hidden;
 	transform:translateX(1050px);
 	transition:transform 0.6s ease;
 	z-index: 100000;
@@ -226,6 +226,9 @@
 	}
 }
 .searchbox.searching{
+	width: 668px;
+	height:auto;
+	overflow: visible;
 	transform: translateX(0);
 	.xiala{
 		height: 230px;
