@@ -376,7 +376,9 @@ img {
 }
 
 .nav-iphone .bag.searching {
-  transform: translateX(100px);
+  width: 0;
+  height: 0;
+  transform: translateX(50px);
 }
 
 @media screen and (max-width: 768px) {
