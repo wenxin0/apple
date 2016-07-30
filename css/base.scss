@@ -30,6 +30,22 @@ img{
 	width: $size;
 	height: $size;
 }
+@mixin matrix($w,$h){
+	width: $w;
+	height:$h;
+}
+@mixin circle($size){
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+}
+@mixin gai{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+}
 
 $number:12;
 $l-device:3000px;

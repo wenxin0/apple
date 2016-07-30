@@ -649,46 +649,92 @@ body.searching {
   }
 }
 
-.banner {
+.lunbo {
+  overflow: hidden;
   width: 100%;
-  height: 628px;
+  height: 630px;
+  margin: auto;
 }
 
-.banner .moveleft {
-  font-family: "jixi";
-  width: 67px;
-  height: 128px;
+.lunbo .lunbo-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.lunbo .lunbo-inner li {
+  width: 100%;
+  height: 100%;
+  display: none;
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-  left: 18px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
   cursor: pointer;
-  z-index: 555555;
-  background: url(../img/1.png);
-  display: none;
+  transition: transform 0.6s ease;
 }
 
-.banner .moveright {
-  font-family: "jixi";
-  width: 67px;
-  height: 128px;
+.lunbo .lunbo-inner li a {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-  right: 18px;
-  cursor: pointer;
-  z-index: 555555;
-  background: url(../img/2.png);
-  display: none;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.banner .paganation {
-  width: 114px;
-  height: 8px;
+.lunbo .lunbo-inner .active {
+  transform: translateX(0);
+  display: block;
+}
+
+.lunbo .lunbo-inner .tu1 a {
+  background: #FFFFFF url(../img/bannerbig1.jpg) no-repeat center center;
+}
+
+.lunbo .lunbo-inner .tu2 a {
+  background: #FFFFFF url(../img/bannerbig2.jpg) no-repeat center center;
+}
+
+.lunbo .lunbo-inner .tu3 a {
+  background: #FFFFFF url(../img/bannerbig3.jpg) no-repeat center center;
+}
+
+.lunbo .lunbo-inner .tu4 a {
+  background: #FFFFFF url(../img/bannerbig4.jpg) no-repeat center center;
+}
+
+@media screen and (max-width: 768px) {
+  .lunbo .lunbo-inner .tu1 a {
+    background: #FFFFFF url(../img/bannersmall1.jpg) no-repeat center center;
+  }
+  .lunbo .lunbo-inner .tu2 a {
+    background: #FFFFFF url(../img/bannersmall2.jpg) no-repeat center center;
+  }
+  .lunbo .lunbo-inner .tu3 a {
+    background: #FFFFFF url(../img/bannersmall3.jpg) no-repeat center center;
+  }
+  .lunbo .lunbo-inner .tu4 a {
+    background: #FFFFFF url(../img/bannersmall4.jpg) no-repeat center center;
+  }
+}
+
+.lunbo .lunbo-inner .left {
+  display: block;
+  transform: translateX(-100%);
+}
+
+.lunbo .lunbo-inner .right {
+  display: block;
+  transform: translateX(100%);
+}
+
+.lunbo .zhishi {
+  width: 72px;
+  height: 20px;
   position: absolute;
   left: 0;
   right: 0;
@@ -696,83 +742,42 @@ body.searching {
   bottom: 10px;
 }
 
-.banner .paganation li {
+.lunbo .zhishi li {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #999999;
   float: left;
-  margin: 0 10px;
+  margin: 5px 5px;
   cursor: pointer;
-  z-index: 555555;
 }
 
-.banner .paganation .dian {
-  border: 1px solid #0070c9;
-  background: transparent;
-  transform: translateY(-1px);
+.lunbo .zhishi .active {
+  box-shadow: 0 0 0 1px #177DCE;
+  background: #FFFFFF;
 }
 
-.banner .content {
-  height: 100%;
-  overflow: hidden;
-}
-
-.banner .content li {
+.lunbo i {
+  display: block;
+  width: 67px;
+  height: 128px;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s ease;
-}
-
-.banner .content li a {
-  position: absolute;
-  top: 0;
-  left: 0;
   bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
   margin: auto;
-  z-index: 33333;
+  cursor: pointer;
 }
 
-.banner .content .iphone6s {
-  background: #FFFFFF url(../img/bannerbig1.jpg) no-repeat center center;
+.lunbo .lzuo {
+  background: url(../img/1.png);
+  display: none;
+  left: 0;
 }
 
-.banner .content .ipadpro {
-  background: #FFFFFF url(../img/bannerbig2.jpg) no-repeat center center;
-}
-
-.banner .content .watchs {
-  background: #FFFFFF url(../img/bannerbig3.jpg) no-repeat center center;
-}
-
-.banner .content .macbook {
-  background: #FFFFFF url(../img/bannerbig4.jpg) no-repeat center center;
-}
-
-.banner .content li.active {
-  background: pink;
-  transform: translateX(0);
-}
-
-@media screen and (max-width: 768px) {
-  .banner .content .iphone6s {
-    background: #FFFFFF url(../img/bannersmall1.jpg) no-repeat center center;
-  }
-  .banner .content .ipadpro {
-    background: #FFFFFF url(../img/bannersmall2.jpg) no-repeat center center;
-  }
-  .banner .content .watchs {
-    background: #FFFFFF url(../img/bannersmall3.jpg) no-repeat center center;
-  }
-  .banner .content .macbook {
-    background: #FFFFFF url(../img/bannersmall4.jpg) no-repeat center center;
-  }
+.lunbo .lyou {
+  background: url(../img/2.png);
+  display: none;
+  right: 0;
 }
 
 @media screen and (max-width: 768px) {

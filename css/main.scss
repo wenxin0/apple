@@ -349,105 +349,98 @@ body.searching{
 }
 //header部分结束
 //banner部分开始
-.banner{
-	width: 100%;
-	height: 628px;
-	.moveleft{
-		font-family: "jixi";
-		width:67px;
-		height: 128px;
-		@include shangxia;
-		position: absolute;
-		left:18px;
-		cursor: pointer;
-		z-index: 555555;
-		background: url(../img/1.png);
-		display: none;
-	}
-	.moveright{
-		font-family: "jixi";
-		width:67px;
-		height: 128px;
-		@include shangxia;
-		position: absolute;
-		right:18px;
-		cursor: pointer;
-		z-index: 555555;
-		background: url(../img/2.png);
-		display: none;
-	}
-	.paganation{
-		width: 114px;
-		height: 8px;
-		@include zuoyou;
-		bottom:10px;
+.lunbo{
+	overflow: hidden;
+	@include matrix(100%,630px);
+	margin:auto;
+	.lunbo-inner{
+		width: 100%;
+		height:100%;
 		li{
-			@include cube(8px);
-			border-radius: 50%;
-			background: #999999;
-			float: left;
-			margin: 0 10px;
-			cursor: pointer;
-			z-index: 555555;
-		}
-		.dian{
-			border:1px solid #0070c9;
-			background: transparent;
-			transform:translateY(-1px);
-		}
-	}
-	.content{
-		height: 100%;
-		overflow: hidden;
-		li{
-			position: absolute;
-			top:0;
-			left:0;
 			width: 100%;
 			height:100%;
+			display: none;
+			@include gai;
+			color:#fff;
+			text-align: center;
+			cursor: pointer;
 			transition:transform 0.6s ease;
 			a{
-				position: absolute;
-				top:0;
-				left:0;
-				bottom:0;
-				right:0;
 				width: 100%;
 				height:100%;
-				margin: auto;
-				z-index: 33333;
+				@include gai;
 			}
 		}
-		.iphone6s{
+		.active{
+			transform:translateX(0);
+			display: block;
+		}
+		.tu1 a{
 			background: #FFFFFF url(../img/bannerbig1.jpg)no-repeat center center;
 		}
-		.ipadpro{
+		.tu2 a{
 			background: #FFFFFF url(../img/bannerbig2.jpg)no-repeat center center;
 		}
-		.watchs{
+		.tu3 a{
 			background: #FFFFFF url(../img/bannerbig3.jpg)no-repeat center center;
 		}
-		.macbook{
+		.tu4 a{
 			background: #FFFFFF url(../img/bannerbig4.jpg)no-repeat center center;
 		}
-		li.active{
-			background: pink;
-			transform:translateX(0);
-		}
 		@include ons{
-			.iphone6s{
+			.tu1 a{
 				background: #FFFFFF url(../img/bannersmall1.jpg)no-repeat center center;
 			}
-			.ipadpro{
+			.tu2 a{
 				background: #FFFFFF url(../img/bannersmall2.jpg)no-repeat center center;
 			}
-			.watchs{
+			.tu3 a{
 				background: #FFFFFF url(../img/bannersmall3.jpg)no-repeat center center;
 			}
-			.macbook{
+			.tu4 a{
 				background: #FFFFFF url(../img/bannersmall4.jpg)no-repeat center center;
 			}
 		}
+		.left{
+			display: block;
+			transform:translateX(-100%);
+		}
+		.right{
+			display: block;
+			transform:translateX(100%);
+		}
+	}
+	.zhishi{
+		@include matrix(72px,20px);
+		@include zuoyou;
+		bottom:10px;
+		li{
+			@include circle(8px);
+			background: #999999;
+			float: left;
+			margin:5px 5px;
+			cursor: pointer;
+		}
+		.active{
+			box-shadow: 0 0 0 1px #177DCE;
+			background: #FFFFFF;
+		}
+	}
+	i{
+		display: block;
+		@include matrix(67px,128px);
+		@include shangxia;
+		cursor: pointer;
+	}
+	.lzuo{
+		background: url(../img/1.png);
+		display: none;
+		left:0;
+	}
+	.lyou{
+		background: url(../img/2.png);
+		display: none;
+		right:0;
 	}
 }
 @include ons{
