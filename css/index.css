@@ -781,7 +781,7 @@ body.searching {
 }
 
 @media screen and (max-width: 768px) {
-  .banner {
+  .lunbo {
     height: 540px;
   }
 }
@@ -1033,6 +1033,8 @@ body.searching {
 }
 
 .footer .navfooter-yincang .navzong .shop {
+  font-size: 14px;
+  transition: font-size 0.3s ease;
   width: 100%;
   line-height: 40px;
   color: #333333;

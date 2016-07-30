@@ -444,7 +444,7 @@ body.searching{
 	}
 }
 @include ons{
-	.banner{
+	.lunbo{
 		height: 540px;
 	}
 }
@@ -661,6 +661,8 @@ body.searching{
 				cursor: pointer;
 			}
 			.shop{
+				font-size: 14px;
+				transition:font-size 0.3s ease;
 				width: 100%;
 				line-height: 40px;
 				color:#333333;
